@@ -1,6 +1,8 @@
 ---
 title: "Tutorial"
-output: learnr::tutorial
+output: 
+  learnr::tutorial:
+    css: ["css/style.css"]
 runtime: shiny_prerendered
 ---
 
@@ -11,6 +13,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Topic 1
+
+:::puzzle
+Tasks  
+:::
 
 ### Exercise 
 
