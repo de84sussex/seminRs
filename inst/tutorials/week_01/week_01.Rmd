@@ -14,9 +14,41 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Topic 1
 
+<details>
+  <summary>Click to reveal code!</summary>
+
+``` {r, class.source="chunkbox"}
+
+print("hi")
+
+```
+
+</details>
+
+
 :::puzzle
 Tasks  
 :::
+
+:::fyi
+FYI
+:::
+
+:::demo
+Demo
+:::
+
+
+<details>
+  <summary>Click for a tip!</summary>
+
+:::note
+Note
+:::
+
+</details>
+
+
 
 ### Exercise 
 
