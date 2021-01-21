@@ -1,0 +1,566 @@
+---
+title: "MurdeR Mystery"
+output: 
+  learnr::tutorial:
+    theme: journal
+    css: ["default", "default-fonts", "css/style.css"]       
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(ggplot2)
+library(tidyverse)
+library(countdown)
+
+knitr::opts_chunk$set(echo = FALSE)
+
+# read in data
+data_1 <- here::here("inst/tutorials/mystery/data","gun.csv") %>% readr::read_csv(file = .)
+
+data_2 <- here::here("inst/tutorials/mystery/data","sword.csv") %>% readr::read_csv(file = .)
+
+data_3 <- here::here("inst/tutorials/mystery/data","bottle.csv") %>% readr::read_csv(file = .)
+
+sus_data <- here::here("inst/tutorials/mystery/data","sus_data.csv") %>% readr::read_csv(file = .)
+
+print_1 <- here::here("inst/tutorials/mystery/data","print_1.csv") %>% readr::read_csv(file = .)
+
+print_2 <- here::here("inst/tutorials/mystery/data","print_2.csv") %>% readr::read_csv(file = .)
+
+# setup for exercise
+sus_data_2 <- sus_data %>% dplyr::select(.data = ., perp_name, occupation, last_location, alibi, motive) %>%
+  dplyr::filter(.data = ., alibi == F & motive == T)
+
+```
+
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("css/dnc.png")
+```
+
+
+## Background
+
+### A terrible crime has been committed at the University of Waffleville!
+
+
+
+### The Victim: Prof. Mark Down
+
+<br>
+<br>
+<br>
+<br>
+
+<p align="center">
+```{r, echo=FALSE, out.width="50%"}
+knitr::include_graphics("css/chalk.png")
+```
+</p>
+
+
+
+
+### The Suspects: {.tabset}
+<br>
+
+
+#### Stuart 'Stu' Dio
+<br>
+
+image
+
+
+#### Rene Magritte
+<br>
+
+image
+
+
+#### Dee Plier
+<br>
+
+image
+
+
+#### Ty Dia
+<br>
+
+image
+
+
+#### Jason Light
+<br>
+
+image
+
+
+#### Gigi Plot
+<br>
+
+image
+
+
+
+
+
+
+
+
+### You need to solve the coding tasks to get the clues to crack the case!!
+
+
+## Find the Location!
+
+stuff
+
+
+<details>
+  <summary>Click for a clue!</summary>
+
+:::qs
+Clues
+:::
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Find the Weapon!  
+
+Fix the code to find the missing weapon!
+
+
+```{r gun-plot, exercise=TRUE, exercise.lines = 7}
+
+plot_1 <- ggplot2::ggplot(data_1, aes(x, y))
+plot_1 +
+  geom_point(colour = "grey", size = 3, shape = 20)  
+  coord_cartesian(xlim = c(0, 9), ylim = c(0, 10)) +
+  theme_minimal()
+
+```
+
+```{r gun-plot-hint-1}
+# check for missing punctuation, remember that we need to add layers with ggplot
+
+```
+
+```{r gun-plot-solution}
+# check for missing punctuation, remember that we need to add layers with ggplot
+
+plot_1 <- ggplot2::ggplot(data_1, aes(x, y))
+plot_1 +
+  geom_point(colour = "grey", size = 3, shape = 20) +  
+  coord_cartesian(xlim = c(0, 9), ylim = c(0, 10)) +
+  theme_minimal()
+
+```
+
+
+```{r sword-plot, exercise=TRUE, exercise.lines = 7}
+
+plot_2 <- ggplot2::ggplot(data_2, aes(x, y))
+
+  geom_point(colour = "light blue", size = 3, shape = 20)  +
+  coord_cartesian(xlim = c(0, 9), ylim = c(0, 10)) +
+  theme_minimal()
+
+```
+
+```{r sword-plot-hint-1}
+# check for missing objects, remember that we need to specify the plot object we've created when we add extra layers
+
+```
+
+```{r sword-plot-solution}
+# check for missing objects, remember that we need to specify the plot object we've created when we add extra layers
+
+plot_2 <- ggplot2::ggplot(data_2, aes(x, y))
+plot_2 +
+  geom_point(colour = "light blue", size = 3, shape = 20) +  
+  coord_cartesian(xlim = c(0, 9), ylim = c(0, 10)) +
+  theme_minimal()
+
+```
+
+
+```{r poison-plot, exercise=TRUE, exercise.lines = 7}
+
+plot_3 <- ggplot2::ggplot(data_3, aes(x, y)
+plot_3 +
+  geom_point(colour = "orange, size = 3, shape = 20)  
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 12)) +
+  theme_minimal()
+
+```
+
+```{r poison-plot-hint-1}
+# most errors are because of missing punctuation, check this first!
+
+```
+
+```{r poison-plot-hint-2}
+# most errors are because of missing punctuation, check this first!
+
+plot_3 <- ggplot2::ggplot(data_3, aes(x, y))
+  ......
+
+```
+
+```{r poison-plot-hint-3}
+# most errors are because of missing punctuation, check this first!
+
+plot_3 <- ggplot2::ggplot(data_3, aes(x, y))
+plot_3 +
+  geom_point(colour = "orange", size = 3, shape = 20)
+  ......
+
+```
+
+```{r poison-plot-solution}
+# most errors are because of missing punctuation, check this first!
+
+plot_3 <- ggplot2::ggplot(data_3, aes(x, y))
+plot_3 +
+  geom_point(colour = "orange", size = 3, shape = 20) +  
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 12)) +
+  theme_minimal()
+
+```
+
+<br>
+
+
+<p align="center">
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("css/weapons.png")
+```
+</p>
+
+
+
+```{r weaponquiz}
+quiz(
+  question("Which weapon is missing?",
+    answer("Gun"),
+    answer("Lasergun", correct = TRUE),
+    answer("Sword"),
+    answer("Poison"),
+  incorrect = "Oops, try again!",
+  allow_retry = TRUE,
+  post_message = "Well done! You've found the missing weapon!")
+  
+)
+```
+
+
+
+
+
+
+
+## Narrow Down your Suspects!
+
+
+Let's explore our suspects a little bit, look at the 'sus_data' object in the chunk below
+
+```{r sus-df-1, exercise=TRUE, exercise.lines = 3}
+
+
+
+```
+
+```{r sus-df-1-hint-1}
+# to look at an object, we just need to call its name
+
+```
+
+```{r sus-df-1-solution}
+# to look at an object, we just need to call its name
+
+sus_data
+
+```
+
+
+
+Let's narrow down our suspects by finding out who had a motive *and* no alibi. Keep only the info relating to their name, occupation, last location, alibi, and motive, and create it as a new object called sus_data_2.
+
+```{r sus-df-2, exercise=TRUE, exercise.lines = 7}
+# fill in the rest!
+
+sus_data_2 <- 
+
+```
+
+```{r sus-df-2-hint-1}
+# here you need to use pipes, the select function, and the filter function from dplyr
+
+sus_data_2 <- sus_data %>% ........
+
+```
+
+```{r sus-df-2-hint-2}
+# here you need to use pipes, the select function, and the filter function
+# this is the first line to get you started, remember to fill in the blanks
+
+sus_data_2 <- sus_data %>% dplyr::select(.data = ., .................) %>% 
+  ........
+  
+```
+
+```{r sus-df-2-hint-3}
+# here you need to use pipes, the select function, and the filter function
+# this is the second line, remember to fill in the blanks
+
+sus_data_2 <- sus_data %>% dplyr::select(.data = ., perp_name, occupation, last_location, alibi, motive) %>%
+  dplyr::filter(.data = ., .................)
+  
+```
+
+```{r sus-df-2-solution}
+
+sus_data_2 <- sus_data %>% dplyr::select(.data = ., perp_name, occupation, last_location, alibi, motive) %>%
+  dplyr::filter(.data = ., alibi == F & motive == T)
+
+```
+
+
+
+Let's look at our suspects list again now it's a little shorter. 
+
+```{r sus-df-3, exercise=TRUE, exercise.lines = 3}
+
+```
+
+```{r sus-df-3-hint-1}
+# to look at an object, we just need to call its name
+
+```
+
+```{r sus-df-3-solution}
+# to look at an object, we just need to call its name
+
+sus_data_2
+
+```
+
+```{r sus-quiz}
+quiz(caption = " ",
+  question("Based on their last known location & the location of the crime, who are our top two suspects now?",
+    answer("Stuart (Stu) Dio"),
+    answer("Rene Magritte"),
+    answer("Dee Plier"),
+    answer("Ty Dia"),
+    answer("Jason Light", correct = TRUE),
+    answer("Gigi Plot", correct = TRUE),
+  incorrect = "Check you have the location right and that it matches to our suspects!",
+  allow_retry = TRUE)
+)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+## Find the Perp!
+
+
+Great news! The fingerprint analysis of the weapon is back from the lab! Now we can figure out who did it out of our two suspects.
+
+Finish the figures from the instructions and match the fingerprint to the one on the weapon!
+<br>
+
+### Fingerprint 1  
+
+1. Create a scatterplot, the first line is given for you  
+1. Use grey points, size 4, shape 20  
+1. Start the x axis from 0 to 400  
+1. Start the y axis from 0 to 270  
+1. Use a minimal ggplot theme  
+
+
+```{r print-plot, exercise=TRUE, exercise.lines = 7}
+# perp 5: Jason Light
+
+sus_plot_1 <- ggplot2::ggplot(print_1, aes(x, y))
+
+```
+
+```{r print-plot-hint-1}
+# perp 5: Jason Light
+
+# include the object as your first layer of your plot
+
+sus_plot_1 <- ggplot2::ggplot(print_1, aes(x, y))
+sus_plot_1 +
+
+```
+
+```{r print-plot-hint-2}
+# perp 5: Jason Light
+
+# add your points, specify the colour, size, and shape
+
+sus_plot_1 <- ggplot2::ggplot(print_1, aes(x, y))
+sus_plot_1 +
+  geom_point(colour = "grey", size = 4, shape = 20)  +
+
+```
+
+```{r print-plot-hint-3}
+# perp 5: Jason Light
+
+# add your x- and y-axes
+
+sus_plot_1 <- ggplot2::ggplot(print_1, aes(x, y))
+sus_plot_1 +
+  geom_point(colour = "grey", size = 4, shape = 20)  +
+    coord_cartesian(xlim = c(0, 400), ylim = c(0, 270)) +
+
+```
+
+```{r print-plot-solution}
+# perp 5: Jason Light
+
+# add a theme
+
+sus_plot_1 <- ggplot2::ggplot(print_1, aes(x, y))
+sus_plot_1 +
+  geom_point(colour = "grey", size = 4, shape = 20)  +
+  coord_cartesian(xlim = c(0, 400), ylim = c(0, 270)) +
+  theme_minimal()
+
+```
+
+
+<br>
+
+### Fingerprint 2  
+
+1. Create a scatterplot, the first line is given for you  
+1. Use grey points, size 3, shape 20  
+1. Start the x axis from 0 to 450  
+1. Start the y axis from 0 to 270  
+1. Use a minimal ggplot theme  
+
+
+```{r print-plot-2, exercise=TRUE, exercise.lines = 7}
+# perp 6: Gigi Plot
+
+sus_plot_2 <- ggplot2::ggplot(print_2, aes(x, y))
+
+```
+
+```{r print-plot-2-hint-1}
+# perp 6: Gigi Plot
+
+# include the object as your first layer of your plot
+
+sus_plot_2 <- ggplot2::ggplot(print_2, aes(x, y))
+sus_plot_2 +
+
+```
+
+```{r print-plot-2-hint-2}
+# perp 6: Gigi Plot
+
+# add your points, specify the colour, size, and shape
+
+sus_plot_2 <- ggplot2::ggplot(print_2, aes(x, y))
+sus_plot_2 +
+  geom_point(colour = "grey", size = 3, shape = 20)  +
+
+```
+
+```{r print-plot-2-hint-3}
+# perp 6: Gigi Plot
+
+# add your x- and y-axes
+
+sus_plot_2 <- ggplot2::ggplot(print_2, aes(x, y))
+sus_plot_2 +
+  geom_point(colour = "grey", size = 3, shape = 20)  +
+    coord_cartesian(xlim = c(0, 450), ylim = c(0, 270)) +
+
+```
+
+```{r print-plot-2-solution}
+# perp 6: Gigi Plot
+
+# add a theme
+
+sus_plot_2 <- ggplot2::ggplot(print_2, aes(x, y))
+sus_plot_2 +
+  geom_point(colour = "grey", size = 3, shape = 20)  +
+  coord_cartesian(xlim = c(0, 450), ylim = c(0, 270)) +
+  theme_minimal()
+
+```
+
+
+
+
+
+:::print
+
+Who's fingerprint matches this one found on the weapon?
+
+Was it Jason Light? or Gigi Plot? 
+
+Submit all your answers on the next page!
+
+:::
+
+
+
+
+
+## It's time to crack the case!
+
+
+```{r quiz}
+quiz(caption = " ",
+  question("'Who Dunnit'? What was the weapon? & What was the location?",
+    answer("Stuart (Stu) Dio"),
+    answer("Rene Magritte"),
+    answer("Dee Plier"),
+    answer("Ty Dia"),
+    answer("Jason Light"),
+    answer("Gigi Plot", correct = TRUE),
+    answer("Gun"),
+    answer("Lasergun", correct = TRUE),
+    answer("Sword"),
+    answer("Poison"),
+    answer("Library"),
+    answer("Bar"),
+    answer("Laboratory", correct = TRUE),
+    answer("Computer Room"),
+    answer("Halls"),
+  incorrect = "Uh oh, that's not quite right, try again!",
+  allow_retry = TRUE,
+  post_message = "Well done! You cracked the case!")
+)
+
+```
+

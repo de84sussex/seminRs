@@ -88,6 +88,27 @@ div.note {
 }
 
 
+
+
+div.qs {
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px;
+  color: #ffffff;
+  background-color: #ffc400;
+  border: dashed 5px #fff3bf;
+}
+
+div.qs {
+  background-image: url("newq.png");
+}
+
+
+
 .chunkbox {
   background-color: #99999917;
   border: 3px solid #99999917;
@@ -99,7 +120,22 @@ div.note {
 }
 
 
+div.print {
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px;
+  color: #ffffff;
+  background-color: #ffc400;
+  border: dashed 5px #fff3bf;
+}
 
+div.print {
+  background-image: url("print.png");
+}
 
 
 
