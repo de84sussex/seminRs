@@ -18,15 +18,15 @@ knitr::opts_chunk$set(echo = FALSE)
 # read in data 
 data_1 <- readr::read_csv(file = "www/gun.csv")
 
-data_2 <- here::here("inst/tutorials/mystery/www/sword.csv") %>% readr::read_csv(file = .)
+data_2 <- readr::read_csv(file = "www/sword.csv") 
 
-data_3 <- here::here("inst/tutorials/mystery/www/bottle.csv") %>% readr::read_csv(file = .)
+data_3 <- readr::read_csv(file = "www/bottle.csv")
 
-sus_data <- here::here("inst/tutorials/mystery/www/sus_data.csv") %>% readr::read_csv(file = .)
+sus_data <- readr::read_csv(file = "www/sus_data.csv")
 
-print_1 <- here::here("inst/tutorials/mystery/www/print_1.csv") %>% readr::read_csv(file = .)
+print_1 <- readr::read_csv(file = "www/print_1.csv")
 
-print_2 <- here::here("inst/tutorials/mystery/www/print_2.csv") %>% readr::read_csv(file = .)
+print_2 <- readr::read_csv(file = "www/print_2.csv")
 
 # setup for exercise
 sus_data_2 <- sus_data %>% dplyr::select(.data = ., perp_name, occupation, last_location, alibi, motive) %>%
