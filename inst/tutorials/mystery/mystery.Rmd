@@ -16,7 +16,7 @@ library(here)
 knitr::opts_chunk$set(echo = FALSE)
 
 # read in data
-data_1 <- here::here("inst/tutorials/mystery/data","gun.csv") %>% readr::read_csv(file = .)
+data_1 <- here::here("inst/tutorials/mystery/data/gun.csv") %>% readr::read_csv(file = .)
 
 data_2 <- here::here("inst/tutorials/mystery/data","sword.csv") %>% readr::read_csv(file = .)
 
