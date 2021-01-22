@@ -44,7 +44,7 @@ knitr::include_graphics("css/dnc.png")
 
 ### A terrible crime has been committed at the University of Waffleville!
 
-
+deets
 
 ### The Victim: Prof. Mark Down
 
@@ -69,37 +69,37 @@ knitr::include_graphics("css/chalk.png")
 #### Stuart 'Stu' Dio
 <br>
 
-image
+deets
 
 
 #### Rene Magritte
 <br>
 
-image
+deets
 
 
 #### Dee Plier
 <br>
 
-image
+deets
 
 
 #### Ty Dia
 <br>
 
-image
+deets
 
 
 #### Jason Light
 <br>
 
-image
+deets
 
 
 #### Gigi Plot
 <br>
 
-image
+deets
 
 
 
@@ -113,7 +113,7 @@ image
 
 ## Find the Location!
 
-stuff
+Add
 
 
 <details>

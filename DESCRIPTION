@@ -5,6 +5,9 @@ Version: 0.1.0
 Author: Danielle Evans
 Maintainer: Danielle Evans <de84@sussex.ac.uk>
 Description: Package of SeminR tutorials.
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports: 
+  magrittr,
+  tidyverse
