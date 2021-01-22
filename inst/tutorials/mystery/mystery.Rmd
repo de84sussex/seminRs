@@ -16,17 +16,17 @@ library(here)
 knitr::opts_chunk$set(echo = FALSE)
 
 # read in data
-data_1 <- here::here("inst/tutorials/mystery/data/gun.csv") %>% readr::read_csv(file = .)
+data_1 <- here::here("data/gun.csv") %>% readr::read_csv(file = .)
 
-data_2 <- here::here("inst/tutorials/mystery/data","sword.csv") %>% readr::read_csv(file = .)
+data_2 <- here::here("data/sword.csv") %>% readr::read_csv(file = .)
 
-data_3 <- here::here("inst/tutorials/mystery/data","bottle.csv") %>% readr::read_csv(file = .)
+data_3 <- here::here("data/bottle.csv") %>% readr::read_csv(file = .)
 
-sus_data <- here::here("inst/tutorials/mystery/data","sus_data.csv") %>% readr::read_csv(file = .)
+sus_data <- here::here("data/sus_data.csv") %>% readr::read_csv(file = .)
 
-print_1 <- here::here("inst/tutorials/mystery/data","print_1.csv") %>% readr::read_csv(file = .)
+print_1 <- here::here("data/print_1.csv") %>% readr::read_csv(file = .)
 
-print_2 <- here::here("inst/tutorials/mystery/data","print_2.csv") %>% readr::read_csv(file = .)
+print_2 <- here::here("data/print_2.csv") %>% readr::read_csv(file = .)
 
 # setup for exercise
 sus_data_2 <- sus_data %>% dplyr::select(.data = ., perp_name, occupation, last_location, alibi, motive) %>%
